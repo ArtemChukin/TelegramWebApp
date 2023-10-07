@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test App</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat;wght@200;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+    </style>
 </head>
 <body>
     <div id="main">
@@ -12,5 +29,7 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae deleniti culpa eius magnam facilis totam omnis, voluptas, tenetur cum ratione quam! Nostrum unde eum in porro debitis vitae, nihil accusamus!</p>
         <button id="get">Get Product</button>
     </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
