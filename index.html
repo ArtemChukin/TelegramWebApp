@@ -21,6 +21,10 @@
             background: var(--tg-theme-bg-color);
         }
 
+        p {
+            color: var(--tg-theme-hint-color);
+        }
+
         button {
             border: none;
             border-radius: 10px;
@@ -35,22 +39,46 @@
             background: var(--tg-theme-button-text-color);
         }
 
-        #container {
-            text-align: center;
-        }
-
         button:hover {
             background-color: var(--tg-theme-secondary-bg-color);
+        }
+
+        #container {
+            text-align: center;
+            /* display: block; */
+        }
+
+        input {
+            width: 90%;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-secondary-bg-color);
+            transition: all 500ms ease;
+            width: 500px;
+            height: 50px;
+        }
+
+        input:focus {
+            border-color: var(--tg-theme-text-color);
         }
     </style>
 </head>
 <body>
     <div id="container">
-        <h1>Hello User</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae deleniti culpa eius magnam facilis totam omnis, voluptas, tenetur cum ratione quam! Nostrum unde eum in porro debitis vitae, nihil accusamus!</p>
-        <button id="get">Get Product</button>
+        <h1>Вы выиграли главный приз!</h1>
+        <p></p>
+        <input type="text" id="email" placeholder="Email">
+        <button id="get">Получить подарок</button>
     </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        let btn
+    </script>
 </body>
 </html>
