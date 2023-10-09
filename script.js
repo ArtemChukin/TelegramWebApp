@@ -7,7 +7,7 @@ btn.addEventListener("click", () => {
         alert("Введите пожалуйста почту!");
     }
     else {
-        tg.close();
+        alert("Всё ок!");
     }
 });
 
