@@ -70,7 +70,7 @@
 <body>
     <div id="container">
         <h1>Вы выиграли главный приз!</h1>
-        <p></p>
+        <p id="text"></p>
         <input type="text" id="email" placeholder="Почта">
         <button id="get">Получить подарок</button>
     </div>
@@ -79,7 +79,10 @@
 
     <script>
         let tg = window.Telegram.WebApp;
-        let btn
+        let btn = document.getElementById("get");
+        let text = document.getElementById("text");
+
+        text.textContent = tg.initDataUnsafe + ", Вы выиграли главный приз! Скорее напишите свою почту чтобы получить подарок!";
     </script>
 </body>
 </html>
