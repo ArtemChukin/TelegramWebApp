@@ -1,13 +1,23 @@
 let tg = window.Telegram.WebApp;
 let btn = document.getElementById("get");
-let text = document.getElementById("text");
+let text = document.getElementById("email");
+let output = document.getElementById("output");
 
 btn.addEventListener("click", () => {
     if (text.value == "" || text.value == " ") {
-        alert("Введите пожалуйста почту!");
+        output.className = "wrong";
+        output.textContent = "Пожалуйста укажите почту!";
     }
     else {
-        alert("Всё ок!");
+        if (text.value.includes("@") && text.value.includes(".")) {
+            output.className = "right";
+            output.textContent = "Подарок был выслан на данный адрес почты! Ожидайте!";
+            setTimeout(function(){tg.close()}, 3000);
+        }
+        else {
+            output.className = "wrong";
+            output.textContent = "Пожалуйста укажите настоящую почту!";
+        }
     }
 });
 

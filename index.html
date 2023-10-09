@@ -65,6 +65,22 @@
         input:focus {
             border-color: var(--tg-theme-button-color);
         }
+
+        #output {
+            color: var(--tg-theme-bg-color);
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 300ms ease;
+        }
+
+        #output.right {
+            color: lime;
+        }
+
+        #output.wrong {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +88,7 @@
         <h1>Вы выиграли главный приз!</h1>
         <p id="text"></p>
         <input type="text" id="email" placeholder="Почта">
+        <p id="output"> </p>
         <button id="get">Получить подарок</button>
     </div>
 
